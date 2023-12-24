@@ -68,6 +68,15 @@ if (process.env.NODE_ENV !== 'production') {
     req.logOut()
     res.redirect('/login')
   })
+
+/* app.delete('/logout', (req, res) => {
+    req.logout(function(err) {
+      if (err) {
+        return next(err);
+      }
+      res.redirect('/login');
+    });
+  }) */
   
   function checkAuthenticated(req, res, next) {
     if (req.isAuthenticated()) {
